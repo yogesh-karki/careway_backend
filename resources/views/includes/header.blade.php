@@ -9,7 +9,7 @@
                         <ul class="uk-navbar-nav">
                             <li>
                                 <a href="/" class="uk-navbar-item uk-logo">
-                                    <img class="full" src="./images/logo.png" alt="">
+                                    <img class="full" src="{{Voyager::image(setting('site.logo'))}}" alt="">
                                 </a>
                             </li>
 
@@ -22,7 +22,7 @@
                         <ul class="uk-navbar-nav">
                             <li class="uk-active"><a href="/">Home</a></li>
                             <li>
-                                <a href="./hair.html">Hair Clinic</a>
+                                <a href="/hair">Hair Clinic</a>
                                 <div class="uk-navbar-dropdown">
                                     <ul class="uk-nav uk-navbar-dropdown-nav">
                                         <li><a href="./innerservicepage.html">Hair Transplant</a></li>
@@ -35,7 +35,7 @@
                                 </div>
                             </li>
                             <li>
-                                <a href="./dental.html">Dental Aesthetics</a>
+                                <a href="/dental">Dental Aesthetics</a>
                                 <div class="uk-navbar-dropdown">
                                     <ul class="uk-nav uk-navbar-dropdown-nav">
                                         <li><a href="#">General Dentistry</a></li>
@@ -46,7 +46,7 @@
                                 </div>
                             </li>
                             <li>
-                                <a href="./opd.html">OPD</a>
+                                <a href="/opd">OPD</a>
                                 <div class="uk-navbar-dropdown">
                                     <ul class="uk-nav uk-navbar-dropdown-nav">
                                         <li><a href="./innerservicepage.html">Skin</a></li>
@@ -58,22 +58,24 @@
                             <li><a>Results</a>
                                 <div class="uk-navbar-dropdown">
                                     <ul class="uk-nav uk-navbar-dropdown-nav">
-                                        <li><a href="./images.html">Photo gallery</a></li>
-                                        <li><a href="./videos.html">Video Gallery</a></li>
+                                        <li><a href="/images">Photo gallery</a></li>
+                                        <li><a href="/videos">Video Gallery</a></li>
                                     </ul>
                                 </div>
                             </li>
-                            <li><a href="./faqs.html">FAQs</a></li>
+                            <li><a href="/faqs">FAQs</a></li>
+                            <li><a href="/blogs">Blogs</a></li>
+                            <li><a href="/about">About</a></li>
                         </ul>
 
                     </div>
 
                     <div class="uk-navbar-right">
-                        <a href="https://www.facebook.com/Clinic.in.bharatpur" class="uk-navbar-item" target="_blank">
+                        <a href="{{setting('contact-us.facebook')}}" class="uk-navbar-item" target="_blank">
                             <span uk-icon="icon: facebook"></span>
                         </a>
 
-                        <a href="./contact.html#booking" uk-scroll class=" button">
+                        <a href="/contact#booking" uk-scroll class=" button">
                             Book Now
                         </a>
                     </div>
@@ -85,16 +87,16 @@
                 <div class="uk-navbar-container">
                     <nav uk-navbar="" class="uk-navbar">
                       <div class="uk-navbar-left uk-margin-right">
-                        <a href="./index.html" class="uk-navbar-item uk-logo">
-                          <img src="./images/logo.png">
+                        <a href="/" class="uk-navbar-item uk-logo">
+                          <img src="{{Voyager::image(setting('site.logo'))}}">
                         </a>
                       </div>
                       <div class="uk-navbar-right">
-                          <a href="https://www.facebook.com/Clinic.in.bharatpur" class="uk-navbar-item" target="_blank">
+                          <a href="{{setting('contact-us.facebook')}}" class="uk-navbar-item" target="_blank">
                               <span uk-icon="icon: facebook"></span>
                           </a>
       
-                          <a href="./contact.html#booking" uk-scroll class=" button">
+                          <a href="./contact#booking" uk-scroll class=" button">
                               Book Now
                           </a>
                           <a class="uk-navbar-item uk-navbar-toggle" href="#careway-mobile" uk-toggle="" aria-expanded="false">
@@ -109,9 +111,9 @@
                 <button class="uk-offcanvas-close uk-icon uk-close" type="button" uk-close=""></button>
                 <div class="uk-panel uk-margin-top uk-margin-remove-last-child">
                     <ul class="uk-nav">
-                        <li class="uk-active"><a href="./index.html">Home</a></li>
+                        <li class="uk-active"><a href="/index">Home</a></li>
                         <li>
-                            <a href="./hair.html">Hair Clinic</a>
+                            <a href="/hair">Hair Clinic</a>
                             <div class="uk-navbar-dropdown">
                                 <ul class="uk-nav uk-navbar-dropdown-nav">
                                     <li><a href="./innerservicepage.html">Hair Transplant</a></li>
@@ -124,7 +126,7 @@
                             </div>
                         </li>
                         <li>
-                            <a href="./dental.html">Dental Aesthetics</a>
+                            <a href="/dental">Dental Aesthetics</a>
                             <div class="uk-navbar-dropdown">
                                 <ul class="uk-nav uk-navbar-dropdown-nav">
                                     <li><a href="#">General Dentistry</a></li>
@@ -135,7 +137,7 @@
                             </div>
                         </li>
                         <li>
-                            <a href="./opd.html">OPD</a>
+                            <a href="/opd">OPD</a>
                             <div class="uk-navbar-dropdown">
                                 <ul class="uk-nav uk-navbar-dropdown-nav">
                                     <li><a href="./innerservicepage.html">Skin</a></li>
@@ -147,12 +149,14 @@
                         <li><a>Results</a>
                             <div class="uk-navbar-dropdown">
                                 <ul class="uk-nav uk-navbar-dropdown-nav">
-                                    <li><a href="./images.html">Photo gallery</a></li>
-                                    <li><a href="./videos.html">Video Gallery</a></li>
+                                    <li><a href="/images">Photo gallery</a></li>
+                                    <li><a href="/videos">Video Gallery</a></li>
                                 </ul>
                             </div>
                         </li>
-                        <li><a href="./faqs.html">FAQs</a></li>
+                        <li><a href="/faqs">FAQs</a></li>
+                        <li><a href="/blogs">Blogs</a></li>
+                        <li><a href="/about">About</a></li>
                     </ul>
                 </div>
               </div>
