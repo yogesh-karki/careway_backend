@@ -1,4 +1,4 @@
-<link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+<link rel="shortcut icon" href="{{asset('images/favicon.png')}}" type="image/x-icon">
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.17.0/css/uikit.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.3.1/swiper-bundle.min.css">

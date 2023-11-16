@@ -16,7 +16,7 @@
 @endsection
 
 @section('body')
-    <div class="banner uk-height-medium uk-background-cover uk-position-relative" style="background-image: url('{{Voyager::image($item->banner)}}');">
+    <div class="banner uk-height-medium uk-background-cover uk-position-relative" style="background-image: url('./images/medical-professional-with-gloves-draws-dotted-line-head-balding-man.jpg');">
         <div class="uk-container">
             <div class="uk-overlay-default uk-position-cover">
                 <div class="uk-position-center">
@@ -32,23 +32,23 @@
     <div class="page__intro">
         <div class="uk-container uk-container-small">
             <h1 class="pagetitle uk-text-center">{{$item->title}}</h1>
-          {!!$item->intro!!}
+           {!!$item->intro!!}
         </div>
     </div>
 
     <section>
         <div class="uk-container"> 
             <div class="uk-grid uk-child-width-1-3@m uk-child-width-1-2@s uk-child-1-1">
-                @foreach($hairs as $hair)
+            @foreach($opds as $opd)
                 <div class="post">
-                    <img src="{{Voyager::image($hair->banner)}}" alt="">
+                    <img src="{{Voyager::image($opd->banner)}}" alt="">
                     <div class="about__post">
-                        <h5>{{$hair->title}} </h5>
+                        <h5>{{$opd->title}} </h5>
                         <p>
-                           {!!strip_tags($hair->intro)!!}
+                           {!!strip_tags($opd->intro)!!}
                         </p>
                         <div>
-                            <a href="/hairs/{{$hair->slug}}" class="button">Explore</a>
+                            <a href="/opd/{{$opd->slug}}" class="button">Explore</a>
                         </div>
                     </div>
                 </div>

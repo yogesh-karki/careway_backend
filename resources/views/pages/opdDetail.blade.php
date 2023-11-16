@@ -22,6 +22,7 @@
                 <div class="uk-position-center">
                     <ul class="uk-breadcrumb">
                         <li><a href="/">Home</a></li>
+                        <li><a href="/opd">OPD Clinic</a></li>
                         <li><span>{{$item->title}}</span></li>
                     </ul>
                 </div>
@@ -32,28 +33,13 @@
     <div class="page__intro">
         <div class="uk-container uk-container-small">
             <h1 class="pagetitle uk-text-center">{{$item->title}}</h1>
-          {!!$item->intro!!}
+            {!!$item->intro!!}
         </div>
     </div>
 
-    <section>
-        <div class="uk-container"> 
-            <div class="uk-grid uk-child-width-1-3@m uk-child-width-1-2@s uk-child-1-1">
-                @foreach($hairs as $hair)
-                <div class="post">
-                    <img src="{{Voyager::image($hair->banner)}}" alt="">
-                    <div class="about__post">
-                        <h5>{{$hair->title}} </h5>
-                        <p>
-                           {!!strip_tags($hair->intro)!!}
-                        </p>
-                        <div>
-                            <a href="/hairs/{{$hair->slug}}" class="button">Explore</a>
-                        </div>
-                    </div>
-                </div>
-                @endforeach
-            </div>
+    <section class="page">
+        <div class="uk-container">
+           {!!$item->description!!}
         </div>
     </section>
-@endsection
+ @endsection
