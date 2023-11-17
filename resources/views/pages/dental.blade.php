@@ -167,9 +167,10 @@
             <div class="callback__wrap">
                 <label>Request a callback</label>
                 <div class="search__input">
-                    <form action="" method="GET">
-                        <input type="text" placeholder="Name">
-                        <input type="number" placeholder="Contact Number">
+                    <form action="{{Route('call')}}" method="POST">
+                    @csrf
+                        <input type="text" placeholder="Name" name="name">
+                        <input type="number" placeholder="Contact Number" name="number">
                         <button type="submit"><span uk-icon="arrow-right" class="uk-icon"></span></button>
                     </form>
                 </div>

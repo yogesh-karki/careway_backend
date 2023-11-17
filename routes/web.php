@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\FormController;
 use App\Http\Controllers\PageController;
 
 /*
@@ -30,6 +31,8 @@ Route::get('/dental-blogs/{slug}',[PageController::class,'dentalBlogDetail'])->n
 Route::get('/about',[PageController::class,'about'])->name('about');
 Route::get('/contact',[PageController::class,'contact'])->name('contact');
 Route::get('/dental',[PageController::class,'dental'])->name('dental');
+
+Route::post('/get-a-call',[FormController::class,'call'])->name('call');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
